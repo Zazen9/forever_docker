@@ -44,7 +44,7 @@ git clone <this repository> forever && cd forever
 cp .env.example .env               # passwords, PUBLIC_ADDRESS (public IP or DNS name), WOW_DIR
 ./scripts/gen-certs.sh             # your own CA + server certificate (never share certs/ca/forever_root_ca.key)
 docker compose build               # compiles TrinityCore, takes a while
-docker compose run --rm extractor  # extracts the game data from your client into ./data
+docker compose run --rm extractor  # extracts the game data from your client into ./data - If fails run sudo docker compose run --rm -e CASC_PRODUCT=wowf extractor
 docker compose up -d
 docker compose logs -f worldserver # the first start imports the database (a few minutes)
 ```
