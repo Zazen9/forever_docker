@@ -7,7 +7,7 @@ set -euo pipefail
 WOW=/wow
 OUT=/opt/trinitycore/data
 BIN=/opt/trinitycore/bin
-PRODUCT="${CASC_PRODUCT:-wow_classic_beta}"
+PRODUCT="${CASC_PRODUCT:-wowf}"
 
 if [ ! -f "$WOW/.build.info" ] || [ ! -d "$WOW/Data" ]; then
     echo "[extract] ERROR: $WOW must be the 'World of Warcraft' folder (with .build.info and Data). Check WOW_DIR in .env."
